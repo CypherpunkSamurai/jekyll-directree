@@ -15,7 +15,7 @@ layout: page
 {% assign exte = p.name | downcase | extname %}
 
 {% if p.name contains "index.md" %}
-<li><a href="{{ p.url }}../">../</a></li>
+<li><a href="{{ site.url }}{{ site.baseurl }}{{ p.url }}../">../</a></li>
 {% else %}
 
 {% if pref != '_' %}
@@ -23,9 +23,9 @@ layout: page
 {% else %}
 
 {% if exte contains '.' %}
-<li><a href="{{ p.url }}">{{ p.name }}</a></li>
+<li><a href="{{ site.url }}{{ site.baseurl }}{{ p.url }}">{{ p.name }}</a></li>
 {% else %}
-<li class="folder"><a href="{{ p.url }}">{{ p.name }}</a></li>
+<li class="folder"><a href="{{ site.url }}{{ site.baseurl }}{{ p.url }}">{{ p.name }}</a></li>
 {% endif %}
 
 {% endif %}
